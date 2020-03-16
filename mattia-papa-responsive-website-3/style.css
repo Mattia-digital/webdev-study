@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfbfc;
+  background-color: #fff;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #343434;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap; /* Adding the following flex-wrap property forces items that don’t fit to get bumped down to the next row */
+}
+
+header {
+  display: flex;
+  position: static;
+  width: 100%;
+  border: 1px solid black;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
+nav {
+  border: 1px solid red;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  padding: 5px;
+  border: 1px solid green;
+  justify-content: center;
+  align-items: center;
+}
+
+.social img {
+  height: 20px;
+  width: 20px;
+}
+
+.features-menu li {
+  border: 1px solid red;
+  border-radius: 5px;
+  list-style: none;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.features-menu a:link,
+.features-menu a:visited {
+  text-decoration: none;
+  color: #343434;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.presentazione{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid red;
+}
+.presentazione h1, .presentazione h2, {
+  display: flex;
+  justify-content: center;
+}
+
+.presentazione p {
+  padding-top: 10px;
+}
+
+section img {
+  height: 300px;
+  width: 300px;
+}
+
+.contattami {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+  border: 1px solid red;
+  margin: 0 30px;
+  padding: 0;
+}
+
+.button:link,
+.button:visited {
+  display: block;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.button:hover,
+.button:visited:hover {
+  border: 2px solid #c9c9c9;
+  color: #c9c9c9;
+  cursor: pointer;
+}
+.button:active {
+  color: #343434;
+  background-color: #c9c9c9;
+  transition: .3s ease-in-out;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid aqua;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .logo {
+  padding: 30px;
+}
+
+.sotto {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border: 1px solid green;
+}
+
+.navigation-social {
+  display: flex;
+}
+
+.navigation a:link,
+.navigation a:visited {
+  text-decoration: none;
+  color: #343434;
+  color: black;
+}
+
+.rights {
+  padding: 20px;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {     /* breakpoints */
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  header {
+    position: static;
+  }
+
+  .features-menu {                    /* Add this as a new rule */
+    display: none;
+    border: 1px solid green;
+    top: 0;
+    right: -30px;
+    padding: 30px;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown > span {
+    z-index: 2;
+    position: relative;     /* It’s required because only positioned elements pay attention to their z-index property.*/
+    cursor: pointer;
+    border: 1px solid purple;
+  }
+
+  .dropdown:hover .features-menu {
+    display: flex;
+    flex-direction: column;
+    background: #fcfbfc;
+    border-radius: 5px;
+    padding-top: 40px;
+    position: absolute;      /* Add these */
+    z-index: 1;
+  }
+
+  }
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #F09A9D;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .dropdown span {
+    display: none;
+    }
+
+  .features-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  header {
+    position: static;
+  }
+
+  section {
+    width: 40%;
+    margin: 0;
+  }
+
+  header .logo {
+    padding: 0 20px;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .dropdown span {
+    display: none;
+    }
+
+  .features-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+  }
+
+  .content-container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .feature-1 {
+    order: 2;
+    padding: 0;
+  }
+
+  .feature-2 {
+    order: 1;
+  }
+
+  .contattami {
+    order: 4;
+    margin: 0 0;
+    height: 120px;
+    position: relative;
+    top: -110px;
+  }
+
+  .button {
+    padding: 0 0;
+  }
+
+  .feature-3 {
+    order: 3;
+  }
+
+  .presentazione {
+    margin: 0;
+  }
+
+  .presentazione p {
+    padding-top: 2px;
+  }
+}

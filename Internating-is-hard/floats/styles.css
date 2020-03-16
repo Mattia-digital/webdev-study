@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: 16px;
+}
+
+.page {
+  width: 900px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  background-color: #EAEDF0;
+}
+
+.container {
+  background-color: #EAEDF0;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.content {
+  float: left;
+  width: 650px;
+  height: 500px;
+  background-color: #F5CF8E;
+  padding: 20px;
+}
+
+.article-image {
+  float: left;
+  width: auto;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.25em;
+}
+
+div {
+  text-align: center;
+}
+
+
+.menu {
+  height: 100px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.sidebar {
+  float: left;
+  width: 200px;
+  height: 300px;
+  background-color: #F09A9D;    /* Red */
+}
+
+.content {
+  height: 500px;
+  background-color: #F5CF8E;    /* Yellow */
+}
+
+.footer {
+  /*clear: both;*/
+  overflow: hidden;
+  /*height: 200px;*/
+  background-color: #D6E9FE;    /* Light blue */
+}
+
+.column {
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 160px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.avatar {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #D6E9FE;
+}
+
+.username {
+  margin-top: 30px;
+}
+
+.comment {
+  margin: 10px;
+  overflow: hidden;  /* This is important */
+}
+
+.footer p {
+  font-size: 1em;
+}
